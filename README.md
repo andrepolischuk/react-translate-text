@@ -100,7 +100,7 @@ Type: `element`
 ### createTranslate(translation[, helpers])
 
 You can create translate function earlier and pass it into the `<TranslateProvider />`.
-[Read more about `createTranslate` in `translate-text`'s docs][create-translate]
+[Read more about `createTranslate` in `translate-text`'s docs][create-translate].
 
 ## License
 
