@@ -1,0 +1,106 @@
+{
+  "name": "react-translate-text",
+  "version": "0.1.0",
+  "description": "React higher-order component for text translation",
+  "main": "commonjs",
+  "module": "es",
+  "jsnext:main": "es",
+  "files": [
+    "src",
+    "es",
+    "commonjs"
+  ],
+  "scripts": {
+    "test": "standard && cross-env BABEL_ENV=commonjs ava",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir commonjs",
+    "prepublish": "npm run build:es && npm run build:commonjs",
+    "postpublish": "rm -rf es commonjs && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrepolischuk/react-translate-text.git"
+  },
+  "keywords": [
+    "react",
+    "hoc",
+    "translate",
+    "translator",
+    "i18n",
+    "intl",
+    "internationalization"
+  ],
+  "author": "Andrey Polischuk <me@andrepolischuk.com> (https://andrepolischuk.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrepolischuk/react-translate-text/issues"
+  },
+  "homepage": "https://github.com/andrepolischuk/react-translate-text#readme",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "translate-text": "^0.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.0",
+    "browser-env": "^3.1.0",
+    "cross-env": "^5.0.1",
+    "enzyme": "^2.9.1",
+    "numd": "^3.0.4",
+    "react": "^15.6.1",
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "rimraf": "^2.5.2",
+    "standard": "^10.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "babel": {
+    "env": {
+      "es": {
+        "presets": [
+          [
+            "es2015",
+            {
+              "modules": false
+            }
+          ],
+          "react"
+        ],
+        "plugins": [
+          "transform-class-properties",
+          "transform-object-rest-spread"
+        ]
+      },
+      "commonjs": {
+        "presets": [
+          "es2015",
+          "react"
+        ],
+        "plugins": [
+          "add-module-exports",
+          "transform-class-properties",
+          "transform-object-rest-spread"
+        ]
+      }
+    }
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "./.browser-env"
+    ],
+    "babel": "inherit"
+  }
+}
