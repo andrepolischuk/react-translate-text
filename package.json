@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "test": "standard && cross-env BABEL_ENV=commonjs ava",
+    "size": "npm run build:commonjs && size-limit",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir commonjs",
     "prepublish": "npm run build:es && npm run build:commonjs",
@@ -58,6 +59,7 @@
     "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.6.1",
     "rimraf": "^2.5.2",
+    "size-limit": "^0.13.2",
     "standard": "^10.0.2"
   },
   "peerDependencies": {
@@ -102,5 +104,11 @@
       "./.browser-env"
     ],
     "babel": "inherit"
-  }
+  },
+  "size-limit": [
+    {
+      "path": "./commonjs/index.js",
+      "limit": "2.5 KB"
+    }
+  ]
 }
