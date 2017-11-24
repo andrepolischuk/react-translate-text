@@ -38,7 +38,7 @@
   "homepage": "https://github.com/andrepolischuk/react-translate-text#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "translate-text": "^0.1.0"
+    "translate-text": "^0.1.5"
   },
   "devDependencies": {
     "ava": "^0.18.2",

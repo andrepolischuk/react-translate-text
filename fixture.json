@@ -1,0 +1,10 @@
+{
+  "foo": "foofoo",
+  "bar": {
+    "foo": "barbar",
+    "baz": "bazbaz $1",
+    "foobar": "foobar foo $1 (pluralize $2|foo|foos)",
+    "foobarbaz": "foobarbaz (echo $1)"
+  }
+}
+
