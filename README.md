@@ -102,6 +102,10 @@ Type: `element`
 You can create translate function earlier and pass it into the `<TranslateProvider />`.
 [Read more about `createTranslate` in `translate-text`'s docs][create-translate].
 
+## Related
+
+* [translate-text][translate-text] — translate function with templates precompiling and helpers
+
 ## License
 
 MIT
