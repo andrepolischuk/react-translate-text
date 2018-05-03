@@ -39,7 +39,7 @@
   "homepage": "https://github.com/andrepolischuk/react-translate-text#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "translate-text": "^0.1.5"
+    "translate-text": "^0.2.0"
   },
   "devDependencies": {
     "ava": "^0.18.2",
@@ -54,7 +54,6 @@
     "browser-env": "^3.1.0",
     "cross-env": "^5.0.1",
     "enzyme": "^2.9.1",
-    "numd": "^3.0.4",
     "react": "^15.6.1",
     "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.6.1",
